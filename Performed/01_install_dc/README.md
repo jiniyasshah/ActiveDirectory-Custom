@@ -7,8 +7,6 @@
 
 2. Install the Active Directory Windows Feature
 
-
-PowerShell:
 -----------------------------------------------------------------------
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 -----------------------------------------------------------------------
