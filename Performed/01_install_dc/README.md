@@ -5,7 +5,7 @@
    - Change the IP Address to static
    - Change DNS Server to our own IP Address (192.168.48.155)
 
-2.. Install the Active Directory Windows Feature
+2. Install the Active Directory Windows Feature
 
 
 ...Shell
@@ -19,10 +19,9 @@ Get-DNSClientServerAddress
 ...
 
 
-#Joining the Workstation to the domain
+3. Joining the Workstation to the domain
 
 
 ...
-
 Add-Computer -DomainName zero.com -Credential zero\Administrator -Force -Restart
 ...
