@@ -1,0 +1,27 @@
+{
+  "domain": "zero.com",
+
+  "groups": [
+    {
+      "name": "Employees"
+    }
+  ],
+
+  "users": [
+    {
+      "name": "Alice Lice",
+      "password": "Sanket@12",
+      "groups": ["Employees"]
+    },
+    {
+      "name": "Bob Ob",
+      "password": "Sanket@123",
+      "groups": ["Employees"]
+    },
+    {
+      "name": "Charlie Harlie",
+      "password": "Sanket@1234",
+      "groups": ["Employees"]
+    }
+  ]
+}
