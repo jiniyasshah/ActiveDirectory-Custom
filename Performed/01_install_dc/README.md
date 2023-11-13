@@ -6,20 +6,16 @@
    - Change DNS Server to our own IP Address (192.168.48.155)
 
 2. Install the Active Directory Windows Feature
+   Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+   
+3. Setting up DNS Server
+   Get-NetIPAddress
+   Set-DnsClientServerAddress -InterfaceIndex 7 -ServerAddress 192.168.48.155
+   Get-DNSClientServerAddress
 
------------------------------------------------------------------------
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
------------------------------------------------------------------------
+4. Setting up ADDSForest
+   Import-Module ADDSDeployment
+   Install-ADDSForest 
 
 
------------------------------------------------------------------------
-Get-NetIPAddress
-Set-DnsClientServerAddress -InterfaceIndex 7 -ServerAddress 192.168.48.155
-Get-DNSClientServerAddress
------------------------------------------------------------------------
 
-
-3. Joining the Workstation to the domain
------------------------------------------------------------------------
-Add-Computer -DomainName zero.com -Credential zero\Administrator -Force -Restart
------------------------------------------------------------------------
