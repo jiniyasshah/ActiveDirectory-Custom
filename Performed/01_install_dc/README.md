@@ -8,20 +8,20 @@
 2. Install the Active Directory Windows Feature
 
 
-...Shell
+PowerShell:
+-----------------------------------------------------------------------
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-...
+-----------------------------------------------------------------------
 
-...
+
+-----------------------------------------------------------------------
 Get-NetIPAddress
 Set-DnsClientServerAddress -InterfaceIndex 7 -ServerAddress 192.168.48.155
 Get-DNSClientServerAddress
-...
+-----------------------------------------------------------------------
 
 
 3. Joining the Workstation to the domain
-
-
-...
+-----------------------------------------------------------------------
 Add-Computer -DomainName zero.com -Credential zero\Administrator -Force -Restart
-...
+-----------------------------------------------------------------------
