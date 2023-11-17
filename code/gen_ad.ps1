@@ -6,7 +6,7 @@ param(
 function CreateADGroup(){
     param( [Parameter(Mandatory=$true)] $groupObject )
 
-    $name = $groupObject
+    $name = $groupObject.name
     New-ADGroup -name $name -GroupScope Global
 }
 
